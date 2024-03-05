@@ -41,6 +41,7 @@ partial class MainForm
         volumeTrackBar = new TrackBar();
         volumeLabel = new Label();
         volumeMaxLabel = new Label();
+        openButton = new Button();
         ((System.ComponentModel.ISupportInitialize)volumeTrackBar).BeginInit();
         SuspendLayout();
         // 
@@ -98,7 +99,7 @@ partial class MainForm
         nextButton.BackColor = Color.GreenYellow;
         nextButton.FlatStyle = FlatStyle.Popup;
         nextButton.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 204);
-        nextButton.Location = new Point(211, 60);
+        nextButton.Location = new Point(187, 60);
         nextButton.Name = "nextButton";
         nextButton.Size = new Size(76, 33);
         nextButton.TabIndex = 6;
@@ -111,9 +112,9 @@ partial class MainForm
         playPauseButton.BackColor = Color.GreenYellow;
         playPauseButton.FlatStyle = FlatStyle.Popup;
         playPauseButton.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 204);
-        playPauseButton.Location = new Point(94, 60);
+        playPauseButton.Location = new Point(96, 60);
         playPauseButton.Name = "playPauseButton";
-        playPauseButton.Size = new Size(111, 33);
+        playPauseButton.Size = new Size(85, 33);
         playPauseButton.TabIndex = 7;
         playPauseButton.Text = "Play/Pause";
         playPauseButton.UseVisualStyleBackColor = false;
@@ -185,12 +186,26 @@ partial class MainForm
         volumeMaxLabel.TabIndex = 12;
         volumeMaxLabel.Text = "50%";
         // 
+        // openButton
+        // 
+        openButton.BackColor = Color.GreenYellow;
+        openButton.FlatStyle = FlatStyle.Popup;
+        openButton.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 204);
+        openButton.Location = new Point(269, 60);
+        openButton.Name = "openButton";
+        openButton.Size = new Size(76, 33);
+        openButton.TabIndex = 101;
+        openButton.Text = "Open";
+        openButton.UseVisualStyleBackColor = false;
+        openButton.Click += openButtonClick;
+        // 
         // MainForm
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         BackColor = Color.FromArgb(20, 19, 18);
         ClientSize = new Size(355, 458);
+        Controls.Add(openButton);
         Controls.Add(volumeMaxLabel);
         Controls.Add(volumeLabel);
         Controls.Add(volumeTrackBar);
@@ -225,4 +240,5 @@ partial class MainForm
     private TrackBar volumeTrackBar;
     private Label volumeLabel;
     private Label volumeMaxLabel;
+    private Button openButton;
 }
